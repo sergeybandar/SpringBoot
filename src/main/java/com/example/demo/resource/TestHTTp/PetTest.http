@@ -1,0 +1,89 @@
+###Создание нового жив.
+POST http://localhost:8081/pet
+Content-Type: application/json
+
+{
+  "category": {
+    "name": "category1"
+  },
+  "name": "name3",
+  "tags": [
+    {
+      "name": "tag1"
+    },
+    {
+      "name": "tag2"
+    },
+    {
+      "name": "tag3"
+    }
+  ],
+  "orderStatus": "PLACED",
+  "petStatus": "AVAILABLE"
+}
+
+###Обновление жив. в базе
+PUT http://localhost:8081/pet
+Content-Type: application/json
+
+{
+  "id": 1,
+  "category": {
+    "name": "string"
+  },
+  "name": "doggie111",
+  "tags": [
+    {
+      "name": "string5"
+    },
+    {
+      "name": "string2"
+    },
+    {
+      "name": "string7"
+    }
+  ],
+  "orderStatus": "PLACED",
+  "petStatus": "AVAILABLE"
+}
+
+### Обновление имени и статуса по id
+POST http://localhost:8081/pet/1
+{
+  "name": "updateForm",
+  "petStatus": "SOLD"
+}
+
+### Получить жив. по id
+GET http://localhost:8081/pet/3
+
+###Удаление жив. по id
+DELETE http://localhost:8081/pet/1
+
+###
+
+GET http://localhost:8081/pet
+
+###
+GET http://localhost:8081/pet/1
+
+###
+POST http://localhost:8081/user
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Test3",
+  "login": "test3",
+  "password": "test3"
+}
+
+###
+
+GET http://localhost:8081/pet
+
+###
+
+GET http://localhost:8080/user?id=3
+
+###

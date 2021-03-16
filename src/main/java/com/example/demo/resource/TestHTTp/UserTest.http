@@ -1,0 +1,38 @@
+###Создание юзера
+POST http://localhost:8081/user
+Content-Type: application/json
+
+{
+  "userName": "Usme",
+  "firstName": "Firsme",
+  "lastName": "Laste",
+  "email": "Nilcom",
+  "password": "Pass",
+  "phone": "375291234567"
+}
+###Создание админа
+GET http://localhost:8081/user
+###Авторизация
+POST http://localhost:8081/user/login
+Content-Type: application/json
+
+{
+  "userName": "userName3",
+  "password": "password3"
+}
+###Авторизация
+POST http://localhost:8081/user/login
+Content-Type: application/json
+
+{
+"userName": "admin",
+"password": "admin"
+}
+###Получение юзера по имени
+POST http://localhost:8081/user/admin
+###
+GET http://localhost:8081/user/all
+X-Token:96661bda-ff17-45c4-b85f-0f768f470db2
+###
+GET http://localhost:8081/user/2
+X-Token:96661bda-ff17-45c4-b85f-0f768f470db2

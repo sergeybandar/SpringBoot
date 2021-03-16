@@ -1,0 +1,13 @@
+POST http://localhost:8081/superuser
+Content-Type: application/json
+
+
+    {"name": "string3"}
+
+
+###
+
+
+GET http://localhost:8081/superuser/1
+
+###
